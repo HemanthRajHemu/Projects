@@ -13,13 +13,15 @@
 
   gtag('config', 'UA-146647335-1');
 </script>
-<title> Future Vision BIE - Projects </title>
+<title> Future Vision BIE - Projects - download project with report </title>
 <meta name="google-site-verification" content="google0186c8ef8f3bf22a.html">
 <!-- indexing -->
-<meta name="description" content="Future Vision BIE,verify,Projects,Course,Online,Python,
+<meta name="description" content="Future Vision BIE,
+downlod python projects, with code, reports,Projects,Course,Online,Python,
 Fundamentals,with Networking,FVBIE,K B Hemanth Raj,Vishwa Kiran s,get project,source code, free projects, python projects,with documents">
 
-<meta name="keywords" content="Future Vision BIE,verify,Projects,Course,Online,Python,
+<meta name="keywords" content="Future Vision BIE,
+downlod python projects, with code, reports,Projects,Course,Online,Python,
 Fundamentals,with Networking,FVBIE,K B Hemanth Raj,Vishwa Kiran s,get project,source code, free projects, python projects,with documents" />
 <meta name="author" content="K B HEMANTH RAJ">
 
@@ -84,7 +86,7 @@ Fundamentals,with Networking,FVBIE,K B Hemanth Raj,Vishwa Kiran s,get project,so
 <div class="desp">
 
 <p>
-<h2>Portal to Verify E-Certificate provided by Future Vision BIE</h2>
+<h2>Portal to Verify your Projects & download them in fair use</h2>
 </p>
 
 </div>
@@ -95,14 +97,31 @@ Fundamentals,with Networking,FVBIE,K B Hemanth Raj,Vishwa Kiran s,get project,so
         function getInputValue(){
             // Selecting the input element and get its value 
             var inputVal = document.getElementById("myInput").value;
+			var inp = inputVal;
+			//console.log(inp);
 			var code = "20200515"
             if(inputVal.startsWith(code))
 			{
-				var url = "https://hemanthrajhemu.github.io/Projects/"
-				var str = url+inputVal;
-				// Displaying the value
-				//alert(str);
-				window.location = str;
+				var res = inp.charAt(inp.length-1);
+				//console.log(res);
+				if(res=='P'||res=='p')
+				{
+					//console.log("IN IF");
+					var url = "https://hemanthrajhemu.github.io/Projects/"
+					var cred = inp.slice(0, inp.length-1);
+					var str1 = url+cred;
+					//alert(str1);
+					window.location = str1;
+				}
+				else
+				{
+					//console.log("IN ELSE");
+					var url = "https://hemanthrajhemu.github.io/Projects/"
+					var str = url+inputVal;
+					// Displaying the value
+					//alert(str);
+					window.location = str;
+				}
 			}else{
 				alert("Enter a Valid Credential ID");
 			}
@@ -123,7 +142,7 @@ Fundamentals,with Networking,FVBIE,K B Hemanth Raj,Vishwa Kiran s,get project,so
     <label class="w3-text-brown"><b>Credential ID:</b></label>
     <input class="w3-input w3-border w3-sand" type="text" placeholder="2020XXXXXXXX" id="myInput"></p>
     <p>
-    <button type="button" onclick="getInputValue();" class="w3-btn w3-brown">Verify Your Certificate</button></p>
+    <button type="button" onclick="getInputValue();" class="w3-btn w3-brown">Verify Your Projects</button></p>
   </form>
 
 
